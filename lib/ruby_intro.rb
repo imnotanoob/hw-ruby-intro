@@ -44,7 +44,8 @@ def hello(name)
 end
 
 def starts_with_consonant? s
-  return s =~ /\A(?=[^aeiou])(?=[a-z])/i
+  value = s =~ /\A(?=[^aeiou])(?=[a-z])/i
+  return value
 end
 
 def binary_multiple_of_4? s

@@ -3,25 +3,48 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  if arr.empty?
+    return 0
+  else
+    return arr.inject(:+)
+  end
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  if arr.empty?
+    return 0
+  else
+    returnValue = 0
+    variable = arr.max(2)
+    for elem in variable do
+      returnValue = returnValue + elem
+    end
+    return returnValue
+  end
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  combinationValue = arr.combination(2)
+  for elements in combinationValue do
+    value = 0
+    for elements2 in elements do
+      value = value + elements2
+    end
+    if value == n
+      return true
+    end
+  end
+  return false
 end
 
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  return "Hello, " + name
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  return s =~ /\A(?=[^aeiou])(?=[a-z])/i
 end
 
 def binary_multiple_of_4? s
